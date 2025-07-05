@@ -1,0 +1,51 @@
+.row {
+  margin-left: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.row-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.row-posters {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 8px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.row-posters::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.row-poster {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  cursor: pointer;
+  object-fit: cover;
+}
+.row-poster:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(229,9,20,0.6);
+  z-index: 10;
+}
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .row {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  
+  .row-title {
+    font-size: 1.2rem;
+  }
+  
+  .row-poster {
+    width: 120px;
+  }
+} 

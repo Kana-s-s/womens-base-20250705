@@ -1,29 +1,39 @@
-/* ==== 環境構築後、以下削除 ===== */
+body {
+  background: #111;
+  color: #fff;
+  font-family: 'Noto Sans JP', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-.app-container {
+.app {
+  background: #111;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f3f6fa;
+  padding-top: 70px; /* 固定ヘッダーの高さ分 */
 }
 
-.message-box {
-  background: #fff;
-  padding: 2.5rem 2rem;
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  text-align: center;
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.emoji {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 1rem;
+::-webkit-scrollbar-track {
+  background: #111;
 }
 
-.message-text {
-  font-size: 1.2rem;
-  color: #333;
-  line-height: 1.7;
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .app {
+    padding-top: 60px;
+  }
 }
